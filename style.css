@@ -1,0 +1,18 @@
+body {
+        font-family:Arial;
+        text-align: center;
+        margin-top:50px;
+        background-color: rgb(170, 199, 218);       
+    }
+    input {
+        padding:8px;
+        width:200px;
+    }
+    button {
+        padding:8px;
+        margin:5px;
+        cursor:pointer;
+    }
+    li {
+        margin:10px;
+    }
