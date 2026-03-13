@@ -22,15 +22,33 @@ function displayNotes() {
         let li=document.createElement("li");
         li.textContent=notes[i];
 
+        let buttonGroup=document.createElement("div");
+
+        let editBtn=document.createElement("button");
+        editBtn.textContent="Edit";
+        editBtn.className="edit-btn";
+
+        editBtn.addEventListener("click",function() {
+            let updatedNote=prompt("Edit your note:",notes[i]);
+            if(updatedNote!==null) {
+                notes[i]=updatedNote;
+                saveNotes()
+                displayNotes()
+            }
+        });
         let deleteBtn=document.createElement("button");
         deleteBtn.textContent="Delete";
+        deleteBtn.className = "delete-btn";
 
         deleteBtn.addEventListener("click",function() {
             notes.splice(i,1);
             saveNotes();
             displayNotes();
         });
-        li.appendChild(deleteBtn);
+        buttonGroup.appendChild(editBtn);
+        buttonGroup.appendChild(deleteBtn);
+
+        li.appendChild(buttonGroup);
         list.appendChild(li);
     }
 }
