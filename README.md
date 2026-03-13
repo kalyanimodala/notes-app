@@ -21,12 +21,15 @@ This app allows users to add, edit, and delete notes. Notes are stored in the br
 
 ## Project Structure
 
-notes-app
-|
-|-index.html
-|-style.css
-|-script.js
-|-README.md
+notes-app 
+
+├── index.html
+
+├── style.css
+
+├── script.js
+
+└── README.md
 
 ## Live Demo
 You can view the project here:
